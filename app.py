@@ -23,10 +23,10 @@ def decorder_model():
     return model
 
 @st.cache_resource
-# def load_tokenizer():
-#     with open('C:/Users/mihir anand/OneDrive - Indian Institute of Technology Guwahati/Documents/Data_science/tokenizer.pickle', 'rb') as handle:
-#       tokenizer = pickle.load(handle)
-#     return tokenizer
+def load_tokenizer():
+    with open('C:/Users/mihir anand/OneDrive - Indian Institute of Technology Guwahati/Documents/Data_science/tokenizer.pickle', 'rb') as handle:
+      tokenizer = pickle.load(handle)
+    return tokenizer
 
 @st.cache_resource
 def load_resnet():
@@ -41,7 +41,7 @@ st.write("""
 #loading models and tokenizer
 model = decorder_model()
 resnet_model = load_resnet()
-tokenizer = Tokenizer()
+tokenizer = load_tokenizer()
 
 file = st.file_uploader("Please upload an Image to generate caption", type = ['jpg', 'png', 'jpeg'])
 

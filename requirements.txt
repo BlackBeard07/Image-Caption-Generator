@@ -2,7 +2,6 @@ numpy
 streamlit
 tensorflow
 keras
-pickle
 cv2
 Image
 ImageOps

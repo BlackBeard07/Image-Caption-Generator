@@ -24,7 +24,7 @@ def decorder_model():
 
 @st.cache_resource
 def load_tokenizer():
-    with open('C:/Users/mihir anand/OneDrive - Indian Institute of Technology Guwahati/Documents/Data_science/tokenizer.pickle', 'rb') as handle:
+    with open('tokenizer.pickle', 'rb') as handle:
       tokenizer = pickle.load(handle)
     return tokenizer
 

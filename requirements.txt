@@ -4,4 +4,3 @@ tensorflow
 keras
 opencv-python
 Image
-ImageOps

@@ -3,4 +3,4 @@
 
 -Used LSTM based sentence Generator for generating captions on Images.
 
--Dataset used if [flicker8k]{https://www.kaggle.com/datasets/adityajn105/flickr8k}
+-Dataset used if [flicker8k](https://www.kaggle.com/datasets/adityajn105/flickr8k)https://www.kaggle.com/datasets/adityajn105/flickr8k

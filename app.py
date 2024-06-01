@@ -17,7 +17,7 @@ from PIL import Image,ImageOps
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
-@st.cache_resource
+# @st.cache_resource
 def decorder_model():
     model = load_model('model.h5')
     return model

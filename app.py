@@ -17,9 +17,13 @@ from PIL import Image,ImageOps
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
-# @st.cache_resource
+
+custom_objects = {
+    'Orthogonal': Orthogonal
+}
+@st.cache_resource
 def decorder_model():
-    model = load_model('model.h5')
+    model = load_model('model.h5',custom_objects=custom_objects)
     return model
 
 @st.cache_resource

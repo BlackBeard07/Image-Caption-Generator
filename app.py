@@ -18,15 +18,10 @@ import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-# Custom hash function that returns a constant value
-def ignore_hash(obj):
-    return 0
-
-# Function to load a model with custom hash function
-@st.cache_resource(hash_funcs={type(load_model('model.h5')): ignore_hash})
 def decorder_model():
     model = load_model('model.h5')
     return model
+model = decorder_model()
 
 @st.cache_resource
 def load_tokenizer():
@@ -45,7 +40,7 @@ st.write("""
         """)
 
 #loading models and tokenizer
-model = decorder_model()
+
 resnet_model = load_resnet()
 tokenizer = load_tokenizer()
 

@@ -18,12 +18,9 @@ import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-custom_objects = {
-    'Orthogonal': Orthogonal
-}
 @st.cache_resource
-def decorder_model():
-    model = load_model('model.h5',custom_objects=custom_objects)
+def decorder_model(_model_path):
+    model = load_model(_model_path)
     return model
 
 @st.cache_resource
@@ -43,7 +40,7 @@ st.write("""
         """)
 
 #loading models and tokenizer
-model = decorder_model()
+model = decorder_model('model.h5')
 resnet_model = load_resnet()
 tokenizer = load_tokenizer()
 
